@@ -1,12 +1,10 @@
 server:
   port: 8888
 spring:
+  profiles:
+    active: native
   cloud:
     config:
       server:
-        encrypt.enabled: false
-        git:
-          uri: https://github.com/suyashs52/book-cloud-config
-          searchPaths: /tree/master/src/main/resources/config/licensingservice
-          username: hello
-          password: hello
+        native:
+          searchLocations: file:///C:/Users/suyashsingh01/Downloads/booksconfig/src/main/resources/config/licensingservice
